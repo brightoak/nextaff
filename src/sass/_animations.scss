@@ -1,0 +1,165 @@
+.js-animated{
+	position: relative;
+	opacity: 0;
+}
+.js-animation{
+	animation-duration: .8s;
+	animation-timing-function: ease-in-out;
+	animation-delay:0;
+	animation-fill-mode:forwards;
+}
+@keyframes fadeIn{
+  from {
+    opacity:0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+@keyframes fadeInLeft{
+  from {
+    left: -150px;
+    opacity:0;
+  }
+  to{
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes fadeInRight{
+  from {
+    right: -150px;
+    opacity:0;
+  }
+  to{
+    right: 0;
+    opacity: 1;
+  }
+}
+@keyframes fadeInDown{
+  from {
+    bottom: -50px;
+    opacity:0;
+  }
+  to{
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width:769px) {
+  .animated{
+		position: relative;
+		opacity: 0;
+	}
+	.animation{
+		animation-duration: .8s;
+		animation-timing-function: ease-in-out;
+		animation-delay:0;
+		animation-fill-mode:forwards;
+  }
+  .js-flyin{
+    &#request-info,
+    &#faqs,
+    &#next-steps,
+		&.hero{
+			.wrapper{
+				@extend .animated;
+				bottom: -60px;
+				@include animation($delay:.8s);
+			}
+    }
+    &#overview{
+			.text{
+				@extend .animated;
+			}
+			.img{
+				@extend .animated;
+			}
+    }
+    &#whowelookingfor{
+      .params-list{
+        li{
+          @extend .animated;
+        }
+      }
+    }
+    &#whynextaff{
+      .whynextaff-list{
+        li{
+          @extend .animated;
+        }
+      }
+    }
+    &#next-steps{
+      #steps-navigation{
+        li{
+          @extend .animated;
+        }
+      }
+    }
+  }
+  .js-inview{
+    &#request-info,
+    &#faqs,
+		&.hero{
+			.wrapper{
+				opacity:1;
+				bottom: 0;
+			}
+    }
+    &#next-steps{
+			.wrapper{
+				opacity:1;
+				bottom: 0;
+      }
+      #steps-navigation{
+        li{
+          @extend .animation;
+          animation-name: fadeIn;
+          @for $i from 2 through 10{
+            &:nth-child(#{$i}){
+              animation-delay:.3s * $i;
+            }
+          }
+        }
+      }
+    }
+    &#overview{
+			.text{
+				@extend .animation;
+				animation-name: fadeInLeft;
+			}
+			.img{
+				@extend .animation;
+				animation-name: fadeInRight;
+			}
+    }
+    &#whowelookingfor{
+      .params-list{
+        li{
+          @extend .animation;
+          animation-name: fadeIn;
+          @for $i from 2 through 10{
+            &:nth-child(#{$i}){
+              animation-delay:.3s * $i;
+            }
+          }
+        }
+      }
+    }
+    &#whynextaff{
+      .whynextaff-list{
+        li{
+          @extend .animation;
+          animation-name: fadeIn;
+          @for $i from 2 through 10{
+            &:nth-child(#{$i}){
+              animation-delay:.3s * $i;
+            }
+          }
+        }
+      }
+    }
+  }
+}

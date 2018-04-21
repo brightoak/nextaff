@@ -1,0 +1,123 @@
+#header{
+	position: fixed;
+	width: 100%;
+	z-index:20;
+	box-sizing: border-box;
+	padding: 28px 50px 0;
+	color: #fff;
+	display: flex;
+  justify-content: space-between;
+  &.headroom--not-top{
+    height: auto !important;
+    background: #fff;
+    color: #333;
+    z-index: 25;
+    @include animation;
+    padding-top: 10px;
+    padding-bottom: 17px;
+    border-bottom: 6px solid $linkcolorhover;
+    justify-content: baseline;
+    #nav{
+      position: static;
+      margin-left: auto;
+      ul{
+        padding: 7px 0 0;
+        white-space: nowrap;
+        align-items: center;
+      }
+    }
+    .callus{
+      margin-left: 50px;
+      padding-top: 16px;
+    }
+    .request-info{
+      @extend .btn;
+      padding-top: 15px !important;
+      padding-bottom: 15px !important;
+    }
+  }
+  &.headroom--pinned {
+    transform: translateY(0%);
+  }
+  &.headroom--unpinned {
+    transform: translateY(-100%);
+  }
+	.callus{
+		padding-top: 26px;
+		font-weight: 300;
+		font-size: 20px;
+    text-transform: uppercase;
+    display: flex;
+		dt{
+			margin-right: 10px;
+      font-weight: bold;
+      margin-top: 2px;
+			.fa{
+				vertical-align: top;
+        margin-right: 4px;
+        margin-top: 4px;
+			}
+		}
+	}
+	.hero &{
+		height: 800px;
+	}
+}
+.logo{
+	float: left;
+	width: 239px;
+  height: 53px;
+  @include animation;
+	a{
+		display: block;
+		height: 100%;
+  }
+  path{
+    fill:#fff;
+  }
+  .headroom--not-top &,
+  #footer &{
+    #path005581{
+      fill:#005581;
+    }
+    #pathf47a20{
+      fill:#f47a20;
+    }
+    #pathfff{
+      fill:#fff;
+    }
+  }
+}
+#nav{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 400;
+  ul{
+    display: flex;
+    padding: 30px 50px 8px 70px;
+    li{
+      padding: 0 30px;
+      &:first-child{
+        padding-left: 0;
+      }
+      &:last-child{
+        padding-right: 0;
+      }
+      &.active{
+        a{
+          color: $linkcolorhover;
+        }
+      }
+    }
+  }
+  .opener{
+    display: none;
+    background: url(../images/ico-hamburger.png) no-repeat;
+    width: 30px;
+    height: 20px;
+  }
+}

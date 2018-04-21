@@ -1,0 +1,338 @@
+@media screen and (max-width:1600px) {
+	#header.headroom--not-top{
+    #nav{
+      position: relative;
+      width: 30px;
+      height: 20px;
+      margin-top: 20px;
+      &:hover{
+        ul{
+          display: block;
+        }
+      }
+      .opener{
+        display: block;
+        cursor: pointer;
+      }
+      ul{
+        position: absolute;
+        right: 0;
+        top: 20px;
+        display: none;
+        background: #fff;
+        padding: 20px 20px 25px;
+        border: 3px solid $linkcolorhover;
+        li{
+          padding:15px 0 0;
+          &:first-child{
+            padding-top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:1290px) {
+  #overview{
+    flex-direction: column-reverse;
+    background: url(../images/img3.jpg) no-repeat 100% 50%;
+    .text{
+      padding-left: 0;
+      width: auto;
+      padding: 50px 50px 20px;
+      color: #fff;
+      font-weight: 400;
+      h2{
+        color: #fff;
+      }
+    }
+    .img{
+      width: auto;
+      display: none;
+    }
+    margin-bottom: 50px;
+  }
+  .hero{
+    margin-bottom: 20px;
+  }
+  #whowelookingfor{
+    margin-bottom: 70px;
+  }
+  #whynextaff{
+    margin-bottom: 20px;
+    .heading{
+      padding-bottom: 30px;
+    }
+  }
+  #next-steps{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+  }
+  #faqs{
+    margin-bottom: 50px;
+  }
+  #footer{
+    .logo{
+      margin-bottom: 30px;
+    }
+    .wrapper{
+      flex-wrap: wrap;
+    }
+    .logos{
+      order:3;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}
+@media screen and (max-width:1000px) {
+  .params-list{
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    padding-left: 20px;
+    li{
+      width: 50%;
+      margin-bottom: 50px;
+      max-width: none;
+      padding-right: 20px;
+    }
+  }
+  #whowelookingfor .text{
+    float: none;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width:740px) {
+  .hero{
+    .wrapper{
+      height: auto;
+      padding-top: 200px;
+      padding-bottom: 150px;
+    }
+    .text{
+      transform: none;
+      position: relative;
+    }
+  }
+  #header{
+    .callus{
+      display: none;
+    }
+    .hero &{
+      height: auto;
+    }
+    #nav{
+      position: relative;
+      width: 30px;
+      height: 20px;
+      margin-top: 20px;
+      margin-left: auto;
+      background: none;
+      &:hover{
+        ul{
+          display: block;
+        }
+      }
+      .opener{
+        display: block;
+        cursor: pointer;
+      }
+      ul{
+        position: absolute;
+        white-space: nowrap;
+        right: 0;
+        top: 20px;
+        display: none;
+        background: #fff;
+        padding: 20px 20px 25px;
+        border: 3px solid $linkcolorhover;
+        li{
+          padding:15px 0 0;
+          &:first-child{
+            padding-top: 0;
+          }
+        }
+      }
+      .request-info{
+        @include animation;
+        background: rgb(238,126,18);
+        background: -moz-linear-gradient(top, rgba(238,126,18,1) 0%, rgba(237,106,19,1) 100%);
+        background: -webkit-linear-gradient(top, rgba(238,126,18,1) 0%,rgba(237,106,19,1) 100%);
+        background: linear-gradient(to bottom, rgba(238,126,18,1) 0%,rgba(237,106,19,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ee7e12', endColorstr='#ed6a13',GradientType=0 );
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: #fff;
+        text-transform: uppercase;
+        border-radius: 50px;
+        padding: 20px 40px;
+        display: inline-block;
+        box-shadow:0 3px 6px rgba(0,0,0,.2);
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+        &:hover{
+          background: rgb(237,106,19);
+          background: -moz-linear-gradient(top, rgba(237,106,19,1) 0%, rgba(238,126,18,1) 100%);
+          background: -webkit-linear-gradient(top, rgba(237,106,19,1) 0%,rgba(238,126,18,1) 100%);
+          background: linear-gradient(to bottom, rgba(237,106,19,1) 0%,rgba(238,126,18,1) 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed6a13', endColorstr='#ee7e12',GradientType=0 );
+        }
+      }
+    }
+  }
+  .whynextaff-list{
+    justify-content: center;
+    li{
+      width: 50%;
+      padding-left: 24px;
+      padding-right: 24px;
+      box-sizing: border-box;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  #steps-navigation{
+    flex-wrap: wrap;
+    li{
+      width: 25%;
+    }
+  }
+  #steps-slides{
+    .text{
+      width: auto;
+    }
+    div[class^="icon-"]{
+      display: none;
+    }
+    .inner{
+      padding-bottom: 50px;
+    }
+  }
+  #next-steps .heading{
+    padding-bottom: 0;
+  }
+}
+@media screen and (max-width:500px) {
+  #request-info{
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .tabs-holder{
+    margin-bottom: 0;
+  }
+  #faqs-tabs{
+    flex-wrap: wrap;
+    li{
+      margin-left: 15px;
+      margin-right: 1px;
+    }
+  }
+  #footer{
+    .logo{
+      order:-1;
+      float: none;
+      display: block;
+      margin: 0 auto 30px;
+    }
+    .wrapper{
+      flex-wrap: wrap;
+    }
+    .socials{
+      order:2;
+      margin-left: 0;
+    }
+    .logos{
+      order:1;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 25px;
+    }
+  }
+}
+@media screen and (max-width:414px) {
+  #header{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  h1{
+    font-size: 46px;
+  }
+  h2{
+    font-size: 36px;
+  }
+  #overview .text{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    p{
+      margin-bottom: 16px;
+    }
+  }
+  .params-list{
+    padding-left: 0;
+    li{
+      width: 100%;
+      margin-bottom: 25px;
+    }
+  }
+  #whowelookingfor{
+    margin-bottom: 30px;
+    .text{
+      padding: 20px;
+    }
+  }
+  .whynextaff-list li{
+    width: 100%;
+  }
+  #steps-slides .text{
+    h3{
+      font-size: 24px;
+      margin-bottom: 18px;
+    }
+    p{
+      font-size: 16px;
+      line-height: normal;
+    }
+  }
+  #steps-navigation{
+    li{
+      width: 50%;
+      height: 150px;
+      padding-top: 20px;
+    }
+  }
+  .tabs-holder .accordion{
+    .opener{
+      padding-left: 15px;
+      padding-right: 40px;
+      &:after{
+        right: 20px;
+      }
+    }
+    .text{
+      padding-left: 15px;
+      padding-right: 15px;
+      line-height: normal;
+    }
+  }
+  #request-form{
+    .field{
+      margin-bottom: 15px;
+      textarea.txt{
+        height: 120px;
+        max-height:120px;
+        min-height: 120px;
+      }
+    }
+    .row{
+      margin: 0;
+      flex-direction: column;
+      .field{
+        width: 100%;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
