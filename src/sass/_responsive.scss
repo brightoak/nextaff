@@ -255,6 +255,12 @@
   #header{
     padding-left: 15px;
     padding-right: 15px;
+    &.headroom--pinned {
+      transform: translateY(0%);
+    }
+    &.headroom--unpinned {
+      transform: translateY(-100%);
+    }
   }
   h1{
     font-size: 46px;

@@ -36,12 +36,6 @@
       padding-bottom: 15px !important;
     }
   }
-  &.headroom--pinned {
-    transform: translateY(0%);
-  }
-  &.headroom--unpinned {
-    transform: translateY(-100%);
-  }
 	.callus{
 		padding-top: 26px;
 		font-weight: 300;
